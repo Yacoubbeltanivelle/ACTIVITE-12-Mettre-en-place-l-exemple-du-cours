@@ -17,11 +17,11 @@ const todoSlice = createSlice({
         },
         // Action pour marquer une tâche comme terminée
         toggleTodo: (state, action) => {
-            const idRecherche = action.payload;
-            const tache = state.find((element) => element.id === idRecherche);
+            const todoId = action.payload;
+            const todo = state.find((element) => element.id === todoId);
 
-            if (tache) {
-                tache.completed = !tache.completed;
+            if (todo) {
+                todo.completed = !todo.completed;
             }
         }
 
